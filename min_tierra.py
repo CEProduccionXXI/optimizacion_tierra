@@ -1,3 +1,8 @@
+##########################################################################################################
+# Script realizado por Igal Kejsefman y Facundo Pesce                                                    #
+# Trabajo completo en: https://www.argentina.gob.ar/produccion/cep/consejo-cambio-estructural/documentos #
+##########################################################################################################
+
 import pandas as pd
 import numpy as np
 from scipy.optimize import minimize
@@ -5,9 +10,8 @@ from scipy.optimize import LinearConstraint
 
 
 # Leo el problema desde un csv
-#df_rinde = pd.read_csv("./rinde.csv")  # rinde por cultivo y provincia
-df_rinde = pd.read_csv("m_rend.csv", encoding='latin-1', sep=";")  # rinde por cultivo y provincia
-df_rinde = pd.read_csv("m_rend_pond.csv", encoding='latin-1', sep=";")  # rinde por cultivo y provincia
+df_rinde = pd.read_csv("m_rend.csv", encoding='latin-1', sep=";")  # rinde por cultivo y provincia matriz A
+#df_rinde = pd.read_csv("m_rend_pond.csv", encoding='latin-1', sep=";")  # rinde por cultivo y provincia matriz B
 
 #df_min_prod = pd.read_csv("./min_prod.csv")  # produccion minima por cultivo
 df_min_prod = pd.read_csv("./m_prod.csv", encoding='latin-1')  # produccion minima por cultivo
@@ -47,7 +51,7 @@ def uso_tierra(tierra_max, minima_prod, prop_pobla, rinde_ij):
     tierra_max_j.columns = list(range(tierra_max_j.shape[1]))
     beta = tierra_max_j / denominador_j
     beta = pd.DataFrame(np.where(beta > 1, 1, beta))
-#    beta = beta.join(df_max_land["Provincia"])
+    beta = beta.join(df_max_land["Provincia"])
 
     return  beta
 
@@ -63,7 +67,7 @@ init_sol = (
     np.zeros_like(rinde)
     if df_init_sol is None
     else df_init_sol.drop(columns="Cultivo").values
-)
+    )
 
 df_max_uso_tierra = uso_tierra(df_max_land, df_min_prod, df_frac_pobl, df_rinde)
 max_uso_tierra = df_max_uso_tierra.values.transpose()[0]
@@ -72,10 +76,13 @@ max_uso_tierra = df_max_uso_tierra.values.transpose()[0]
 # El rinde me da las dimensiones del problema
 n_cult, n_prov = rinde.shape
 
-# Restricciones de la forma lb < a.dot(solucion) < ub
+# Restricciones de la forma lb < a.dot(solución) < ub en notación matricial
+# lb = lower bounds (límite inferior) 
+# ub = upper bound (límite superior)
+# a = restricción
 a, lb, ub = [], [], []
 
-# Agrego restricciones de produccion minima por cultivo
+# Agrego restricciones de producción minima por cultivo
 for i_cult in range(n_cult):
     tmp = [0] * n_cult * n_prov
     tmp[i_cult * n_prov:(i_cult + 1) * n_prov] = rinde[i_cult]
@@ -84,15 +91,6 @@ for i_cult in range(n_cult):
     ub.append(np.inf)
 
 # Agrego restricciones de tierra maxima por provincia
-#for i_prov in range(n_prov):
-    #tmp = [
-    #    (i + n_prov - 1 - i_prov) % (n_prov) / (n_prov - 1)
-    #    for i in range(n_prov * n_cult)
-    #]
-    #a.append(tmp)
-    #lb.append(0)
-    #ub.append(max_land[i_prov])
-
 
 for i_prov in range(n_prov):
     tmp = [0] * n_cult * n_prov
@@ -100,23 +98,23 @@ for i_prov in range(n_prov):
         tmp[i_prov+n_prov*i_cult] = 1
     a.append(tmp)
 
-#llegás a algo así
+#llegás a una matriz a así
 #[[1,0,0,0,1,0,0,0,1,0,0,0],
 # [0,1,0,0,0,1,0,0,0,1,0,0],
 # [0,0,1,0,0,0,1,0,0,0,1,0],
 # [0,0,0,1,0,0,0,1,0,0,0,1]]
 
-
+#vectores de restricciones lb y ub
 for i_prov in range(n_prov):
     lb.append(0)
     ub.append(max_land[i_prov])
 
 
-# Agrego restriccion: produccion minimia x cultivo x provinica segun poblacion
-alpha = 1# fraccion de produccion minima proporcional a la poblacion
+# Agrego restricción: producción mínimia por cultivo por provincia según población
+alpha = 1 # fracción de producción mínima proporcional a la población
 for i_cult in range(n_cult):
     for i_prov in range(n_prov):
-        if rinde[i_cult,i_prov]<=0: # No aplicar restriccion si algun rinde es 0
+        if rinde[i_cult,i_prov]<=0: # No aplica restricción si algún rinde es 0
             continue
         else:
             tmp = [0] * n_cult * n_prov
@@ -133,11 +131,9 @@ ub = [float(x) for x  in ub]
 
 constr = LinearConstraint(a, lb, ub)
 
-# Optimizacion
+# Optimización
 def f(x):
     return x.sum()
-    # + beta * sum((frac_poblacion[prov]-frac_prod[prov,cult])**2)
-
 
 res = minimize(
     f,
@@ -150,7 +146,6 @@ print(res.message)
 # Resultado: matriz suelo utilizado por cultivo y provincia
 cultivo_provincia = res.x.reshape((n_cult, n_prov))
 
-# Guardo solucion como csv
 df_cultivo_provincia = pd.DataFrame(cultivo_provincia, columns=df_rinde.columns.values[1:])
 df_cultivo_provincia.insert(0, "Cultivo", df_rinde.Cultivo)
 
@@ -168,12 +163,9 @@ proporción_utilizada = pd.concat([df_max_land.Provincia, proporción_utilizada]
 
 proporción_utilizada.columns = ["provincia", "proporción (%)"]
 
-#proporción_utilizada.to_csv("propocion_tierras_a0.csv", index = False)
-#df_cultivo_provincia.to_csv("cultivo_provincia_a0.csv", index= False)
-
-proporción_utilizada_a1 = proporción_utilizada
-
-
+# Guardo solución como csv
+proporción_utilizada.to_csv("propocion_tierras_a0.csv", index = False)
+df_cultivo_provincia.to_csv("cultivo_provincia_a0.csv", index= False)
 
 
 
