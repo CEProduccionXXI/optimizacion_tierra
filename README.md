@@ -59,7 +59,7 @@ el remanente en las restantes que aún cuentan con tierras para alcanzar la prod
 objetivo. El dominio de θ se encuentra acotado entre 0 y 1, de modo que no genera un efecto
 incremental sobre el límite superior de la restricción.
 
-![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/restriccion3.PNG?raw=true)
+![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/restriccion3.png?raw=true)
 
 	siendo:
 
