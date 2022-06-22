@@ -79,9 +79,9 @@ Redes sociales: https://twitter.com/CEPXXI
 
 
 ## Autoría:
-Dr. Igal Kejsefman
+Igal Kejsefman (igalkej[a]gmail.com)
 
-Lic. Facundo Pesce
+Facundo Pesce (facundopesce[a]gmail.com)
 
 #### Agradecimientos:
 Agradecemos al Dr. Kevin Speyer por su apoyo en el manejo de las librerías
