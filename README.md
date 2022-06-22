@@ -25,7 +25,7 @@ El problema de optimización está planteado del siguiente modo:
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/Problema%20de%20minimización.PNG?raw=true)
 
 Las resticciones implmentadas son:
-![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/Restricciones.PNG?raw=true)
+![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/Restricciones.png?raw=true)
 
 Formalmente:
 
@@ -34,19 +34,19 @@ En el problema que estamos analizando existen 23 provincias y 48 cultivos. Por l
 la asignación más eficiente para producir los 48 cultivos en las 23 provincias cuya suma sea la
 mínima posible, es decir minimizar la expresión:
 
-![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/optimo.PNG?raw=true)
+![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/optimo.png?raw=true)
 
 sujeto a:
 1. Producto total por cultivo. Este valor se desprende de la canasta de consumo elaborada en
 el presente trabajo para cada cultivo. Representa el nivel de producción estimado para
 abastecer a toda la población para que todas las personas puedan consumir en la misma
 magnitud que el promedio del decil 10.
-![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/restriccion1.PNG?raw=true)
+![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/restriccion1.png?raw=true)
 
 2. Tierras disponibles. Es el límite estimado de disponibilidad de tierras aptas para cultivo en
 cada provincia. Esta restricción tiene como finalidad que la asignación de tierras resultante
 a cada provincia no supere el nivel de disponibilidad existente.
-![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/restriccion2.PNG?raw=true)
+![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/restriccion2.png?raw=true)
 
 3. Producir en proporción a la población. Representa una restricción que implica que la
 provincia debe producir –siempre que pueda– un porcentaje según su población. Este
@@ -62,7 +62,7 @@ incremental sobre el límite superior de la restricción.
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/restriccion3.PNG?raw=true)
 
 siendo: 
-![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/siendo.PNG?raw=true)
+![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/siendo.png?raw=true)
 
 
 4. No negatividad de las variables. Finalmente, se restringe la posibilidad de que la producción,
