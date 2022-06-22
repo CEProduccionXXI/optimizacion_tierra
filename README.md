@@ -14,12 +14,10 @@ El documento de trabajo se encuentra disponible en: (poner link)
 
 ## Objetivo del repositorio
 El repositorio disponibiliza el código para la optimización y distribución óptima de tierra de modo que se puedan profundizar y sofisticar los análisis.
-Al estar disponible el código, quines lo manipulen pueden incorporar nuevos cultivos, regiones (como departamentos en lugar de provincias), calcular los rindes de otra manera o actualizar la información, o agregar restricciones como distancias de transporte, emisiones de gases de efecto invernadero entre otras.
+Al estar disponible el código, quines lo manipulen pueden incorporar nuevos cultivos, regiones (como departamentos en lugar de provincias), calcular los rindes de otra manera, actualizar la información, o agregar restricciones como distancias de transporte, emisiones de gases de efecto invernadero, entre otras.
 
 
-
-
-## El repositorio
+## La optimización
 El ejercicio propone dos tipos de matrices de rendimientos cuyos promedios por cultivo son consistentes con los rindes medios.
 Matriz de rendimientos A:
 
@@ -63,7 +61,7 @@ incremental sobre el límite superior de la restricción.
 
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/restriccion3.PNG?raw=true)
 
-3.a. siendo:
+	siendo:
 
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/siendo.png?raw=true)
 
