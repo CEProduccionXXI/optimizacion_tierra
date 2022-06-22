@@ -19,8 +19,7 @@ El ejercicio propone dos tipos de matrices de rendimientos cuyos promedios por c
 
 Matriz de rendimientos A
 
-
-
+![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/Matriz%20de%20rendimientos%20A.PNG?raw=true)
 
 
 ## Links:
