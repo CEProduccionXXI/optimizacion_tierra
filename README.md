@@ -13,8 +13,13 @@ El fin último de este trabajo reside en aportar a la mejora alimentaria y nutri
 El documento de trabajo se encuentra disponible en: (poner link)
 
 ## El repositorio
+El repositorio disponibiliza el código para la optimización y distribución óptima de tierra de modo que puedan analizarse o sofisticarse los resultados.
+El ejercicio propone dos tipos de matrices de rendimientos cuyos promedios por cultivo son consistentes con los rindes medios.
 
-15:24 22/6/2022
+
+Matriz de rendimientos A
+
+
 
 
 
