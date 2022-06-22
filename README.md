@@ -58,6 +58,7 @@ Dados los rendimientos en una provincia, la tierra podría no alcanzar por lo qu
 el remanente en las restantes que aún cuentan con tierras para alcanzar la producción
 objetivo. El dominio de θ se encuentra acotado entre 0 y 1, de modo que no genera un efecto
 incremental sobre el límite superior de la restricción.
+
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/restriccion3.PNG?raw=true)
 
 siendo: 
@@ -66,7 +67,7 @@ siendo:
 
 4. No negatividad de las variables. Finalmente, se restringe la posibilidad de que la producción,
 el rinde o la tierra variables adquieran valores negativos.
-![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/noneg.PNG?raw=true)
+![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/noneg.png?raw=true)
 
 
 ## Links:
