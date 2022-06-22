@@ -30,7 +30,7 @@ Matriz de rendimientos B:
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/Matriz%20de%20rendimientos%20B.png?raw=true)
 
 El problema de optimización está planteado del siguiente modo:
-![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/Problema%20de%20minimización.PNG?raw=true)
+![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/Problema%20de%20minimización.png?raw=true)
 
 Las resticciones implmentadas son:
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/Restricciones.png?raw=true)
