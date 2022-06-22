@@ -12,9 +12,14 @@ El fin último de este trabajo reside en aportar a la mejora alimentaria y nutri
 
 El documento de trabajo se encuentra disponible en: (poner link)
 
-## El repositorio
-El repositorio disponibiliza el código para la optimización y distribución óptima de tierra de modo que puedan analizarse o sofisticarse los resultados.
+## Objetivo del repositorio
+El repositorio disponibiliza el código para la optimización y distribución óptima de tierra de modo que se puedan profundizar y sofisticar los análisis.
+Al estar disponible el código, quines lo manipulen pueden incorporar nuevos cultivos, regiones (como departamentos en lugar de provincias), calcular los rindes de otra manera o actualizar la información, o agregar restricciones como distancias de transporte, emisiones de gases de efecto invernadero entre otras.
 
+
+
+
+## El repositorio
 El ejercicio propone dos tipos de matrices de rendimientos cuyos promedios por cultivo son consistentes con los rindes medios.
 Matriz de rendimientos A:
 
@@ -78,7 +83,7 @@ Dr. Igal Kejsefman
 
 Lic. Facundo Pesce
 
-### Agradecimientos:
+#### Agradecimientos:
 Agradecemos al Dr. Kevin Speyer por su apoyo en el manejo de las librerías
 
 
