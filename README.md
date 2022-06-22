@@ -17,8 +17,11 @@ El repositorio disponibiliza el código para la optimización y distribución ó
 
 El ejercicio propone dos tipos de matrices de rendimientos cuyos promedios por cultivo son consistentes con los rindes medios.
 Matriz de rendimientos A:
+
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/Matriz%20de%20rendimientos%20A.PNG?raw=true)
+
 Matriz de rendimientos B:
+
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/Matriz%20de%20rendimientos%20B.png?raw=true)
 
 El problema de optimización está planteado del siguiente modo:
