@@ -62,7 +62,7 @@ incremental sobre el límite superior de la restricción.
 
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/restriccion3.png?raw=true)
 
-	siendo:
+- siendo:
 
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/siendo.png?raw=true)
 
@@ -79,12 +79,11 @@ Redes sociales: https://twitter.com/CEPXXI
 
 
 ## Autoría:
-Igal Kejsefman (igalkej[a]gmail.com)
+* Igal Kejsefman (igalkej[a]gmail.com)
+* Facundo Pesce (facundopesce[a]gmail.com)
 
-Facundo Pesce (facundopesce[a]gmail.com)
-
-#### Agradecimientos:
-Agradecemos al Dr. Kevin Speyer por su apoyo en el manejo de las librerías
+##### Agradecimientos:
+Agradecemos al Dr. Kevin Speyer (@kevo-speyer) por su apoyo en el manejo de las librerías
 
 
 
