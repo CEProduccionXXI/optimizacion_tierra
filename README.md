@@ -36,7 +36,7 @@ Las resticciones implmentadas son:
 
 Formalmente:
 
-En el problema que estamos analizando existen 23 provincias y 48 cultivos. Por lo tanto existen 1.104 incógnitas Ti,j para hallar. Entonces, el problema de optimización consiste en encontrar la asignación más eficiente para producir los 48 cultivos en las 23 provincias cuya suma sea la mínima posible, es decir minimizar la expresión:
+En el problema que estamos analizando existen 23 provincias y 48 cultivos. Por lo tanto existen 1.104 incógnitas $T_{ij}$ para hallar. Entonces, el problema de optimización consiste en encontrar la asignación más eficiente para producir los 48 cultivos en las 23 provincias cuya suma sea la mínima posible, es decir minimizar la expresión:
  
 ![](https://github.com/CEProduccionXXI/optimizacion_tierra/blob/main/intuitivo/optimo.png?raw=true)
 
